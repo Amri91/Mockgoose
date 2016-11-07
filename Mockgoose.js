@@ -156,7 +156,7 @@ module.exports = function(mongoose, db_opts) {
     }
 
     module.exports.reset = function(done) {
-        mongoose.connection.db.dropDatabase(function(err) {
+        mongoose.connection.dropDatabase(function(err) {
             if (typeof done === "function") {
                 done(err);
             }
